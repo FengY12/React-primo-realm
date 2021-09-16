@@ -1,0 +1,274 @@
+:root{
+    --blue: deepskyblue;
+  --white: white;
+  --text: rgb(155, 154, 154);
+  /*--text-background: rgb(22, 22, 22);*/
+  --text-background: rgba(19, 19, 19, 0.7);
+}
+
+.LProject-page {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    /*background-color: rgb(15, 15, 15);*/
+    background-color: rgb(24, 24, 24);
+
+    color: white;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    top:0;
+    overflow-x: hidden;
+}
+
+#nav-bar{
+    position: fixed;
+    background-color: rgb(31, 31, 31);
+    /*background-color: transparent;*/
+    width: 15%;
+    min-width: 300px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 3;
+}
+
+#content-container {
+    margin-top: 80px;
+    padding: 0px 2rem;
+}
+
+.text-section {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#back-btn {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    border-radius: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    margin: 10px 0px;
+    transition: 0.3s ease-in-out;
+}
+
+#home-btn {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    border-radius: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    margin: 10px 0px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+
+}
+
+#back-btn:hover, #home-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+#img-container{ 
+    position: relative;
+    align-items: center;
+    display: flex;
+    
+}
+
+img{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+   
+}
+
+.btn{
+    position: absolute;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    font-size: medium;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    opacity: 0;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+
+
+#next-btn {
+    right:0;
+}
+
+#project-title{
+    color: deepskyblue;
+    font-size: 4rem;
+    margin-left: 2rem;
+    /*border: 2px solid red;*/
+}
+
+#project-title::after{
+    content: "Project";
+    color: white;
+}
+
+.title-section {
+    display: flex;
+    margin-top: 5%;
+    align-items: center;
+}
+
+
+.description-container{
+    position: relative;
+    width: 100%;
+    margin-top: 5rem;
+    background-color: var(--text-background);
+    padding: 2rem;
+    border-radius: 50px;
+}
+
+#project-description{
+    width: 100%;
+    height: auto;
+    font-size: 1.5rem;
+    color:var(--text)
+}
+
+#description-title{
+    position: relative;
+    color:white;
+    width: 30%;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+#description-title::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+}
+
+.titles{
+    color:white;
+    font-size: 3rem;
+}
+
+#git-btn{
+    width: 300px;
+    margin-left: auto;
+    margin-right: 2rem;
+    font-size: 1.5rem;
+    border-radius: 40px;
+    padding: 0.2rem 2rem;
+    background-color: White;
+    border:2px solid transparent;
+    color: black;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+#git-btn:hover {
+    color:white;
+    background-color: transparent;
+    border:2px solid white;
+}
+
+.skills-container{
+    width: 100%;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: var(--text-background);
+    border-radius: 50px;    
+}
+
+.skill {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.project-skill{
+    margin-top: 1.5rem;
+    color:var(--text)
+}
+
+
+footer{
+    height:50vh;
+    width: 100%;
+}
+
+
+.icons{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-left: 1rem;
+}
+
+.technology-used-container{
+    width: 100%;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: var(--text-background);
+    border-radius: 50px; 
+}
+
+.tech-used-container{
+    margin-top: 1.5rem;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--text);
+}
+
+
+@media screen and (max-width: 600px) {
+    .btn{
+        position: relative;
+
+        margin-top: 1rem;
+        width: 30%;
+    }
+
+    #img-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    .title-section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #git-btn{
+        margin-top: 2rem;
+        margin-right: auto;
+    }
+
+    #description-title{
+        width: 100%;
+    }
+
+
+}

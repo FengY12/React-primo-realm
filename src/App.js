@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
+import React from 'react';
+import LProject from './components/LearningProjects/learningProjects';
+import HomPage from './components/HomePage/HomePage';
+import PProject from './components/personalProjects/personalProjects';
+import { ProjectList } from './components/Projects/ProjectList';
+
+
 
 function App() {
+
+  function existProject(name){
+      for (let x in ProjectList) {
+        if (x.urlName == name) {
+          return true
+        }
+      }
+      return false
+  }
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Router>
+      {/*
+      <Navbar />
+      <Hero />
+      <About />
+       <Projects /> */}
+      <Switch>
+        <Route path="/" exact component={HomPage} />
+        <Route path="/learningproject/:name" exact component={LProject} />
+        <Route path="/personalproject/:name" exact component={PProject} />
+        </Switch>
+    </Router>
+
   );
 }
 

@@ -1,0 +1,68 @@
+.projects-section {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: rgb(24, 24, 24);
+    color: white;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    top:0;
+    overflow-x: hidden;
+}
+
+#background-title{
+    color: rgb(12, 12, 12);
+    opacity: 50%;
+    position: absolute;
+    font-size: 40vh;
+    top: 20%;
+    left:36%;
+    z-index: -1;
+
+}
+
+
+#title-container{
+    align-items: center;
+    width: 100vw;
+}
+
+#projects-title{
+    font-size: 4rem;
+    left: 0;
+    color:deepskyblue;
+}
+
+#projects-title::before{
+    content: "My";
+    color: white;
+    font-size: 3rem;
+    margin-left: 6%;
+}
+
+#contain-box {
+    width: 90%;
+    padding: 8% 5%;
+    margin: auto;
+}
+
+
+#projects-container{
+    display: grid;
+    /*grid-template-columns: repeat(auto-fill, minmax(186px, 20rem));*/
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    justify-items: center;
+    /*justify-content: center;*/
+}
+
+@media screen and (max-width: 600px) {
+    #contain-box {
+        width: 100%;
+    padding: 0;
+    }
+
+}

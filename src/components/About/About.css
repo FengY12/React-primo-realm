@@ -1,0 +1,70 @@
+.about-section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(24, 24, 24);
+    color: rgb(187, 186, 186);
+    margin: 0;
+    z-index: 1;
+    position: relative;
+    padding: 0;
+    top: 0;
+    overflow-x: hidden;
+
+}
+
+#content-box {
+    width: 90%;
+    padding: 8%;
+    margin: auto;
+
+}
+
+
+#primo-realm-title {
+    font-size: 4em;
+    color: deepskyblue;
+    left: 0;
+    z-index: 2;
+}
+
+#primo-realm-title::before {
+    content: "About ";
+    color: white;
+    font-size: 3rem;
+
+}
+
+.text-container{ 
+    padding-top: 5vh;
+}
+
+
+#about-me-title {
+    font-size: 4em;
+    color: deepskyblue;
+    padding-top: 10vh;
+}
+
+#about-me-title::before {
+    content: "About ";
+    color: white;
+    font-size: 3rem;
+}
+
+
+.about-content {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    opacity: 0;
+}
+
+
+.background-title{
+    color: rgb(12, 12, 12);
+    opacity: 50%;
+    position: absolute;
+    font-size: 40vh;
+    top: 15%;
+    left:36%;
+
+}

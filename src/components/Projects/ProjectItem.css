@@ -1,0 +1,114 @@
+#name {
+    color: deepskyblue;
+    margin-top: 1rem;
+    margin-bottom:0.5rem;
+    overflow-wrap: break-word;
+    width: 90%;
+}
+
+.project-identifier{
+    font-weight:bold;
+    margin-top: 3%;
+}
+
+
+#learning-project {
+
+    color: rgb(122, 99, 253);
+    border-radius: 20px;
+    padding: 0.4rem 1.5rem;
+    /*color:rgb(235, 235, 235);*/
+    background-color: rgb(35,35,35);
+}
+
+#personal-project {
+    color: rgb(197, 78, 78);
+    border-radius: 20px;
+    padding: 0.4rem 1.5rem;
+    background-color: rgb(35,35,35);
+}
+
+
+
+
+#picture{
+    min-height: 10rem;
+    min-width: 5rem;
+    transition: 0.3s;
+}
+
+.project-item:hover #picture{
+    transform: scale(1.05);
+}
+
+.project-item:hover #description{
+    color: white;
+}
+
+.project-item{
+    display: flex;
+    flex-direction: column;
+    /*border: 2px solid white;*/
+    background-color: rgba(19, 19, 19, 0.6);
+    border-radius: 20px;
+    width: 20rem;
+    min-height: 500px;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 3rem;
+    transition: 0.3s ease-in-out;
+    /*box-shadow: 0px 5px 2rem rgb(61, 61, 61);*/
+
+}
+
+#card-text-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+}
+
+
+
+
+.project-item:hover {
+    transform:scale(1.05);
+}
+
+#description {
+    display: block;
+    color: rgb(187, 186, 186);
+    max-height: 5rem;
+    line-height: 1.5rem;
+
+
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin-top: 5%;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    /*border: 2px solid red;*/
+    transition: 0.3s ease-in;
+}
+
+#link {
+    color: rgb(241, 241, 241);
+    text-decoration: none;
+    margin-top: auto;
+    margin-bottom: 8%;
+    background-color: transparent;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    border: 2px solid rgb(197, 197, 197);
+    padding: 0.2rem 3rem;
+    transition: 0.2s ease-in-out;
+}
+
+#link:hover{
+    background-color: white;
+    color: black;
+}
+
