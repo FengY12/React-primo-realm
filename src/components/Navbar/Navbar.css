@@ -7,9 +7,10 @@
     position: sticky;
     align-items: center;
     font-size: 1.7rem;
-    z-index: 999;
+    z-index: 100;
     margin-top: -10vh;
     overflow-x: hidden;
+    display: none;
 }
 
 
@@ -40,6 +41,7 @@
     border-radius: 20px;
     transition: 0.3s ease-in-out;
     cursor: pointer;
+    opacity: 0;
 }
 
 
@@ -87,8 +89,9 @@
     margin-left: 1rem;
     display: flex;
     align-items: center;
-    transition: 0.2s ease-in-out;
-    border-radius: 40px;;
+    transition: 0.3s ease-in-out;
+    border-radius: 40px;
+    opacity: 0;
 }
 
 .logo:hover {
@@ -117,6 +120,7 @@
     border-radius: 20px;
     transition: 0.3s ease-in-out;
     cursor: pointer;
+    opacity: 0;
 }
 
 #nav-projects:hover {
@@ -132,6 +136,7 @@
 }
 
 #nav-contact{
+    opacity: 0;
     font-size: 1.6rem;
     color: white;
     text-decoration: none;

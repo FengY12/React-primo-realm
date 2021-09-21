@@ -22,7 +22,7 @@ export default function About() {
 
     return (
         <div class="about-section" id="about">
-            <h1 class="background-title"> About </h1>
+            <h1 class="about-background-title"> About </h1>
 
 
             <div id="content-box">

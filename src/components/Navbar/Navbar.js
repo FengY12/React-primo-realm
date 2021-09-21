@@ -12,6 +12,17 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Navbar() {
     useEffect(() => {
 
+
+    var tl = gsap.timeline()
+   
+    /*
+    tl.to(".nav-items", {
+        stagger:0.3,
+        opacity:1,
+        duration:0.5,
+        
+    })
+*/
 /*
 gsap.to(".nav-container", {
     scrollTrigger: {
@@ -72,7 +83,7 @@ var tl = gsap.timeline({
         <nav class="nav-bar">
         <div class="nav-container">
            <Link 
-                class="logo" 
+                class="logo nav-items" 
                 to="hero"
                 smooth={true}
                 offset={0}
@@ -87,6 +98,7 @@ var tl = gsap.timeline({
            <ul class="nav-list">
                <li class="list-item">
            <Link
+           class="nav-items"
             id="nav-about"
             activeClass="active"
             to="about"
@@ -103,6 +115,7 @@ var tl = gsap.timeline({
                 </li> */}
                 <li class="list-item">
                 <Link
+            class="nav-items"
             id="nav-projects"
             activeClass="active"
             to="projects"
@@ -115,6 +128,7 @@ var tl = gsap.timeline({
 
                 <li class="list-item">
                 <Link
+            class="nav-items"
             id="nav-contact"
             activeClass="active"
             to="contact"

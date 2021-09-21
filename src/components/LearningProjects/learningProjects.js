@@ -96,6 +96,17 @@ export default function LProject(props) {
             duration:0.8}
         )
 
+        gsap.to("#git-btn", {
+            scrollTrigger: {
+                trigger: "#content-container",
+                toggleActions: "restart reset none reverse",
+                start: "top center"
+            }, 
+            width:"300px",
+            fontSize:"1.5rem",
+           
+        })
+
 
         
 

@@ -18,7 +18,7 @@ export const ProjectList = [
     {
         image: [flower],
         name: "Project 2",
-        urlName: "Project1",
+        urlName: "Project_Flower",
         projectType:"personal",
         description: "Flower Project!!",
         technologiesUsed:["Python"],
@@ -43,7 +43,19 @@ export const ProjectList = [
         description: "4th Project fajfkja",
         skills: ["Flower", "Tree"],
         technologiesUsed:["C"]
+    },
+    {
+        image: [""],
+        name: "Project 5",
+        urlName: "Project_course",
+        projectType:"course",
+        description: "aaaaaaaaaaaaaaaaaaaaa",
+        skills: ["Flower", "Tree"],
+        technologiesUsed:["Java"]
     }
+
+
+
 
 
 ]

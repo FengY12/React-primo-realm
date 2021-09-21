@@ -49,7 +49,7 @@
     display: flex;
     flex-direction: column;
     /*border: 2px solid white;*/
-    background-color: rgba(19, 19, 19, 0.6);
+    background-color: rgba(19, 19, 19, 0.8);
     border-radius: 20px;
     width: 20rem;
     min-height: 500px;
@@ -69,8 +69,12 @@
 
 }
 
-
-
+#course-project{
+    color: #FFD700;
+    border-radius: 20px;
+    padding: 0.4rem 1.5rem;
+    background-color: rgb(35,35,35);
+}
 
 .project-item:hover {
     transform:scale(1.05);

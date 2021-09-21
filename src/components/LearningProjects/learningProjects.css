@@ -174,10 +174,10 @@ img{
 }
 
 #git-btn{
-    width: 300px;
+    width: 200px;
     margin-left: auto;
     margin-right: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border-radius: 40px;
     padding: 0.2rem 2rem;
     background-color: White;
@@ -253,6 +253,12 @@ footer{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+    }   
+
+    img{
+        width: 100%;
+        height: 300px;
+  
     }
 
 
@@ -270,5 +276,9 @@ footer{
         width: 100%;
     }
 
+    #project-title{
+        font-size: 3rem;
+        margin-left: 0;
+    }
 
 }

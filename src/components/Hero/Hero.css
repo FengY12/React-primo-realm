@@ -1,16 +1,45 @@
 .hero-section {
     width: 100%;
     min-height: 100vh;
-    /*background-color: rgb(15, 15, 15);*/
-    background-color: rgb(24, 24, 24);
+    background-color: rgb(15, 15, 15);
+    /*background-color: rgb(24, 24, 24);*/
     color: white;
     position: relative;
     background-size: cover;
     background-position: center;
     z-index: 1;
     overflow-x: hidden;
-
+    overflow-y:hidden;
 }
+
+.splashLogo{
+    stroke: white;
+    height:30%;
+    width: 30%;
+}
+
+
+
+.landing-logo{
+    top:50%;
+    transform: translateY(-50%);
+    position:absolute;
+    stroke: white;
+    height:100%;
+    width: 50%;
+    z-index: 0;
+    overflow-x: hidden
+    /*background-color: rosybrown;*/
+}
+
+.landing-logo > #landing-Left_top{
+    stroke: deepskyblue;
+}
+
+.landing-logo > #landing-Right_top{
+    stroke: deepskyblue;
+}
+
 
 #test {
     position: absolute;
@@ -22,7 +51,7 @@
 
 
 #hero-title {
-    color: rgb(12, 12, 12);
+    color: rgb(23, 23, 23);
     opacity: 50%;
     position: absolute;
     font-size: 35vh;
@@ -101,4 +130,16 @@
 #sub-welcome-title {
     margin-top: 1rem;
     color:rgb(83, 82, 82);
+}
+
+.load{
+    z-index: 999;
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden
 }

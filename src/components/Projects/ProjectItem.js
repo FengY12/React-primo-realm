@@ -28,7 +28,7 @@ export default function ProjectItem( {item} ) {
 
             <LinkR to={
                 {pathname: item.projectType === "learn"? '/learningproject/'+item.urlName :
-        '/personalproject/'+item.urlName,
+                item.projectType === "personal" ? '/personalproject/'+item.urlName : '/courseproject/'+item.urlName,
         state:"hello"}} id="link"> Detail </LinkR> 
         </div>
         </div>
