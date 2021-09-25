@@ -16,6 +16,7 @@
     stroke: white;
     height:30%;
     width: 30%;
+    transform-origin: center;
 }
 
 
@@ -104,6 +105,11 @@
         font-size: 1.05rem;
     }
 
+    .landing-logo{
+        overflow-x: hidden
+
+    }
+
 }
 
 
@@ -131,6 +137,16 @@
     margin-top: 1rem;
     color:rgb(83, 82, 82);
 }
+
+#sub-welcome-title::before{
+    position: absolute;
+    width: 80%;
+    content: "";
+    background-color: white;
+    height: 50%;
+}
+
+
 
 .load{
     z-index: 999;

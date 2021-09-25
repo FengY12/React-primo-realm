@@ -23,6 +23,7 @@ export default function HomPage() {
   useEffect(() => {
     var rule = CSSRulePlugin.getRule(".welcome-title:before")
     var scrollBar = CSSRulePlugin.getRule("::-webkit-scrollbar")
+    var subWelcomText = CSSRulePlugin.getRule("#sub-welcome-title::before")
 
     
 
@@ -50,14 +51,17 @@ function timeline() {
       transformOrigin:"center",
         scale:100,
         ease: "expo.out",
-        duration:1
-    }).to(".load", {
+        duration:1.2
+    }, "-=0.5").to(".load", {
       autoAlpha:0,
       duration:2
     }, "-=0.5").to(rule, {
       width: "0%",
       duration:0.8,
-    }, "-=2").to(scrollBar, {
+    }, "-=2").to(subWelcomText, {
+        width:"0%",
+        duration:0.5
+    }, "-=1.7").to(scrollBar, {
       display:"block"
     }, "=-1").set(".nav-bar", {
       display:"flex",

@@ -3,7 +3,7 @@ import "../contact/contact.css"
 
 export default function Contact() {
     var email = "mailto:wz345@drexel.edu"
-    
+    var Linkedin = "https://www.linkedin.com/in/wenfeng-zhong-22bb061ba/"
 
 
 
@@ -22,7 +22,7 @@ export default function Contact() {
 
                 <div class="contact-box">
                     <div>Linkedin</div>
-                    <div class="contact-btn"> I </div>
+                    <div class="contact-btn" onClick={() => window.location.href = Linkedin}> I </div>
                 </div>
                 
                 <div class="contact-box">

@@ -108,6 +108,27 @@ export default function LProject(props) {
         })
 
 
+        gsap.from("#project-description", {
+            scrollTrigger: {
+                trigger: "#content-container",
+                toggleActions: "play reset none reverse",
+                start: "top center"
+            }, 
+            opacity: "0",
+            y:"15px",
+            duration:0.8
+        })
+
+        gsap.from(".tech-used", {
+            scrollTrigger: {
+                trigger: ".technology-used-container",
+                toggleActions: "play reset none reverse",
+                start: "bottom 100%"
+            }, 
+            opacity: "0",
+            y:"15px",
+            duration:0.8
+        })
         
 
         window.scrollTo(0, 0)
@@ -115,6 +136,18 @@ export default function LProject(props) {
 
     return (
         <div class="LProject-page">
+{/*}
+            <div class="model">
+                <img id="model-pic" src={img[picture]}></img>
+                <button class="btn" id="next-btn" onClick={nextPic}>
+                Next
+            </button>
+
+            <button class="btn" id="prev-btn" onClick={prevPic}>
+                Prev
+            </button>
+            </div>
+    */}
             <div id="nav-bar">
             <button id="back-btn" onClick={() => history.goBack()}>Back</button>
             <a id="home-btn"href="/">Home</a>
@@ -183,8 +216,6 @@ export default function LProject(props) {
             <footer>
 
             </footer>
-
-
             </div>
             </div>: <ProjectNotFound />}
             

@@ -8,16 +8,29 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
     useEffect(() => {
-        gsap.to(".about-content", {
+        gsap.to("#primo-about-content", {
             scrollTrigger: {
-                trigger: "#content-box",
+                trigger: "#primo-realm-title",
                 toggleActions: "restart none none reverse",
                 start: "top center"
             },
             y:-20, 
             opacity: 1,
             duration:2});
+            
+        gsap.to("#personal-about-content", {
+            scrollTrigger: {
+                trigger: "#about-me-title",
+                toggleActions: "restart none none reverse",
+                start: "top center"
+            },
+            y:-20, 
+            opacity: 1,
+            duration:2
+        })
+
         
+
     }, [])
 
     return (
@@ -32,10 +45,9 @@ export default function About() {
 
             </div>   
             <div class="text-container">
-            <p class="about-content" >
+            <p class="about-content" id="primo-about-content">
                 Primo Realm is my main personal website and the hub for all my personal projects. 
-                The website is built with React.JS along with CSS styling. All graphics shown
-                in the website are custom made SVGs. The incentive of creating Primo Realm was to not only
+                The website is built with React.JS and other JavaScript libraries for animation. The incentive of creating Primo Realm was to not only
                 have a place where I can display all my creations and share them with the public, but also
                 a testament on what kind of website I can make from scratch.
                 
@@ -44,11 +56,11 @@ export default function About() {
             <h1 id="about-me-title">Me</h1>
 
             <div class="text-container">
-            <p class="about-content">
-                Hello everyone, My name is Feng, I am a Pre-Junior in Drexel University major in Software Engineering.
+            <p class="about-content" id="personal-about-content">
+                Hello everyone, My name is Feng, I am a Pre-Junior in Drexel University majoring in Software Engineering.
                 I have a strong interest in new techlogies and I am always curious to discover and learn about new
                 ideas for the present and the future. Other than coding, I am also interested in creating vector designs
-                and 3D models, because it is satisfying to be able to create something from myself.
+                and 3D models, because it feels accomplishing to be able to create something from myself.
 
             </p>
         

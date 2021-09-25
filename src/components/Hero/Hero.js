@@ -24,7 +24,7 @@ export default function Hero() {
             }, 
             width: "0%",
             duration:0.8});
-*/
+*/      
 
 
         var tl2 = gsap.timeline()
@@ -37,6 +37,9 @@ export default function Hero() {
             duration:1,
             ease:"sine.inOut"
         }).repeat(-1).yoyo(true)
+
+
+        
 
 
         

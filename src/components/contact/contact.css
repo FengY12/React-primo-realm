@@ -43,13 +43,15 @@
 }
 
 .contact-btn{
+    display: flex;
+    justify-content: center;
     color: black;
     font-size: 30px;
     margin-left: auto;
     background-color: white;
     border-radius: 30px;
     width: 10%;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
     text-align: center;
     transition: 0.3s ease;
     cursor: pointer;

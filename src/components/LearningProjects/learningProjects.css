@@ -24,6 +24,22 @@
     overflow-x: hidden;
 }
 
+.model {
+    position: absolute;
+    display: flex;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    text-align: center;
+}
+
+#model-pic {
+    opacity: 100%;
+}
+
+
 #nav-bar{
     position: fixed;
     background-color: rgb(31, 31, 31);
@@ -87,7 +103,8 @@
 }
 
 img{
-    width: 400px;
+    /*width: 400px;*/
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     height: 400px;
@@ -177,7 +194,7 @@ img{
     width: 200px;
     margin-left: auto;
     margin-right: 2rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border-radius: 40px;
     padding: 0.2rem 2rem;
     background-color: White;
