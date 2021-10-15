@@ -84,6 +84,8 @@
     color: deepskyblue;
 }
 
+
+/* For phone */
 @media screen and (max-width: 600px) {
     #test {
         position: absolute;
@@ -111,6 +113,16 @@
     }
 
 }
+
+
+@media screen and (max-width: 800px) {
+    #welcome-title{
+        color: white;
+        /*position: absolute;*/
+        font-size: 2em;
+    }
+  }
+
 
 
 /*

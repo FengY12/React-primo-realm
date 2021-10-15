@@ -34,8 +34,6 @@ export default function HomPage() {
       delay:1.5});
 */
 
-var controller = new ScrollMagic.Controller();
-var scene = new ScrollMagic.Scene().setPin(".load").addTo(controller);
 
 
 var tl = gsap.timeline()
@@ -58,10 +56,10 @@ function timeline() {
     }, "-=0.5").to(rule, {
       width: "0%",
       duration:0.8,
-    }, "-=2").to(subWelcomText, {
+    }, "-=1.7").to(subWelcomText, {
         width:"0%",
         duration:0.5
-    }, "-=1.7").to(scrollBar, {
+    }, "-=1.3").to(scrollBar, {
       display:"block"
     }, "=-1").set(".nav-bar", {
       display:"flex",
@@ -80,6 +78,53 @@ function timeline() {
       window.scrollTo(0, 0);
       tl.play(0);
  }*/
+
+  var tl2 = gsap.timeline({paused:true})
+
+ /*
+  tl2.from(["#landing-Left_top", "#landing-Right_top"], {
+      y:-20,
+      duration:1
+      
+  }).to(["#landing-Left_top", "#landing-Right_top"], {
+      y:-20,
+      duration:1,
+      ease:"sine.inOut"
+  }).repeat(-1).yoyo(true)
+*/
+
+/*
+  var tl3 = gsap.timeline()
+        tl3.fromTo("#main-body", { 
+          autoAlpha: 0,
+          y:-100
+        }, {
+          y:0,
+          autoAlpha:1,
+          duration:2,
+          delay:2.5,
+        }).fromTo(["#landing-Left_top", "#landing-Right_top"], {
+            autoAlpha:0,
+            y:200
+        }, {
+          y:-20,
+          autoAlpha:1,
+          duration:1,
+        }, "-=2").fromTo(["#landing-Left_bot", "#landing-Right_bot"], {
+            autoAlpha:0,
+            y:200
+        }, {
+          stagger: {
+            amount:1
+          },
+          y:0,
+          autoAlpha:1,
+          duration:1,
+        })
+*/
+ 
+
+
 document.getElementById("load").onclick = () => {
  
   if (clicked === 0) {
@@ -106,6 +151,60 @@ timeline()
 
 //Only Renders when "clicked" sate changes
 }, [clicked])
+
+useEffect(() => {
+
+  var controller = new ScrollMagic.Controller();
+  var scene = new ScrollMagic.Scene().setPin(".load").addTo(controller);
+
+  var tl3 = gsap.timeline()
+  tl3.fromTo("#main-body", { 
+    autoAlpha: 0,
+    y:-100
+  }, {
+    y:0,
+    autoAlpha:1,
+    duration:2,
+    delay:2,
+  }).fromTo(["#landing-Left_top", "#landing-Right_top"], {
+      autoAlpha:0,
+      y:20
+  }, {
+    y:-20,
+    autoAlpha:1,
+    duration:1,
+  }, "-=2").fromTo(["#landing-Left_bot", "#landing-Right_bot"], {
+      autoAlpha:0,
+      y:200
+  }, {
+    stagger: {
+      amount:0.2
+    },
+    y:0,
+    autoAlpha:1,
+    duration:1,
+  })
+
+  var tl2 = gsap.timeline({paused:true})
+
+  tl2.from(["#landing-Left_top", "#landing-Right_top"], {
+    y:-20,
+    duration:1
+    
+}).to(["#landing-Left_top", "#landing-Right_top"], {
+    y:-20,
+    duration:1,
+    ease:"sine.inOut"
+}).repeat(-1).yoyo(true)
+
+
+tl3.eventCallback("onComplete", function() {
+  tl2.play(0);
+});
+
+},[])
+
+
 
 
   return (

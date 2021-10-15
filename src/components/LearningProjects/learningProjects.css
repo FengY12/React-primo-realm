@@ -3,15 +3,16 @@
   --white: white;
   --text: rgb(155, 154, 154);
   /*--text-background: rgb(22, 22, 22);*/
-  --text-background: rgba(19, 19, 19, 0.7);
+  /*--text-background: rgba(19, 19, 19, 0.7);*/
+  --text-background: rgba(20, 20, 20, 0.8);;
 }
 
 .LProject-page {
     width: 100%;
     height: auto;
     min-height: 100vh;
-    /*background-color: rgb(15, 15, 15);*/
-    background-color: rgb(24, 24, 24);
+    /*background-color: rgb(24, 24, 24);*/
+    background-color: rgb(15, 15, 15);
 
     color: white;
     position: relative;
@@ -45,7 +46,7 @@
     background-color: rgb(31, 31, 31);
     /*background-color: transparent;*/
     width: 15%;
-    min-width: 300px;
+    min-width: 200px;
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
     display: flex;
@@ -204,6 +205,7 @@ img{
     transition: 0.2s ease-in-out;
 }
 
+
 #git-btn:hover {
     color:white;
     background-color: transparent;
@@ -291,6 +293,7 @@ footer{
 
     #description-title{
         width: 100%;
+        font-size: 2rem;
     }
 
     #project-title{
@@ -298,4 +301,21 @@ footer{
         margin-left: 0;
     }
 
+    #back-btn {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+    
+    #home-btn {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+
+    #nav-bar{
+        width: 65%;
+    }
+
+    .titles {
+        font-size: 2rem;
+    }
 }

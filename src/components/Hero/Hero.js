@@ -26,7 +26,7 @@ export default function Hero() {
             duration:0.8});
 */      
 
-
+/*
         var tl2 = gsap.timeline()
         tl2.from(["#landing-Left_top", "#landing-Right_top"], {
            y:-20,
@@ -37,7 +37,7 @@ export default function Hero() {
             duration:1,
             ease:"sine.inOut"
         }).repeat(-1).yoyo(true)
-
+*/
 
         
 
@@ -47,20 +47,20 @@ export default function Hero() {
 
 
     return (
-        <div class="hero-section" id="hero">
-            <div class="load" id="load">
+        <div className="hero-section" id="hero">
+            <div className="load" id="load">
             <SplashSvg className="splashLogo"/>
             {/*<h1 id="load-title">
                 AOD
                 <SplashSvg class="splashLogo"/>
     </h1>*/}
         </div>
-            <LandingSvg class="landing-logo"/>
+            <LandingSvg className="landing-logo"/>
             <h1 id="hero-title"> PRIMO REALM </h1>
             <div id="test">
-            <h1 id="welcome-title" class="welcome-title"> Welcome to </h1>
+            <h1 id="welcome-title" className="welcome-title"> Welcome to </h1>
             <div id="line"> </div>
-            <h2 id="sub-welcome-title">Feng's Personal Website</h2>
+            <h2 id="sub-welcome-title">Hub for Feng's Projects</h2>
             </div>
             
         </div>

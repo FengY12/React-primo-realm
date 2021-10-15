@@ -49,6 +49,7 @@
     width: 90%;
     padding: 8% 5%;
     margin: auto;
+    overflow-x: scroll;
 }
 
 
@@ -62,8 +63,42 @@
 
 @media screen and (max-width: 600px) {
     #contain-box {
-        width: 100%;
-    padding: 0;
+        width: 90%;
+        padding: 0;
     }
+
+    #projects-title{
+        font-size: 4rem;
+        margin-top: 20px;
+        color:deepskyblue;
+    }
+    
+    #projects-container{
+        overflow-x: scroll;
+        display: flex;
+        justify-items:center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding-top: 1rem;
+    }
+
+}
+
+@media screen and (min-width: 700px) and (max-width:800px) {
+    #projects-title{
+        font-size: 4rem;
+        margin-top: 2rem;
+        color:deepskyblue;
+    }
+
+    #projects-container{
+        overflow-x: scroll;
+        display: flex;
+        justify-items:center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding-top: 5rem;
+    }
+
 
 }

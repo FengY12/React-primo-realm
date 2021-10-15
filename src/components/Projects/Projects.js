@@ -5,7 +5,7 @@ import ProjectItem from './ProjectItem';
 
 export default function Projects() {
     return (
-        <div class="projects-section" id="projects">
+        <div className="projects-section" id="projects">
             <h1 id="background-title"> Projects </h1>
 
 
@@ -15,7 +15,7 @@ export default function Projects() {
             
                 {ProjectList.map((item, key) => {
                     {/* return <ProjectItem image={item.image} name={item.name} urlName = {item.urlName} description={item.description}/>*/}
-                    return <ProjectItem item = {item}  />
+                    return <ProjectItem key= {key} item = {item}  />
                 })}
 
             </div>

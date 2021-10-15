@@ -12,14 +12,14 @@ export default function ProjectItem( {item} ) {
 
 
     return (
-        <div class="project-item">
+        <div className="project-item">
             <div id="picture" style={{backgroundImage: `url(${item.image[0]})`}}>
               
              </div>
             <div id="card-text-section">
             <h1 id="name"> {item.name} </h1>
 
-            <div class="project-identifier">
+            <div className="project-identifier">
                 {item.projectType === "learn"? <p id="learning-project">Learning Project</p> : item.projectType === "personal"? <p id="personal-project">Personal Project</p>: <p id="course-project"> Course Project</p>}
 
             </div>

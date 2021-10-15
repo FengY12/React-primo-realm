@@ -1,6 +1,7 @@
 .contact-section {
     width: 100%;
     min-height: 100vh;
+    height: auto;
     background-color: rgb(15, 15, 15);
     /*background-color: rgb(24, 24, 24);*/
     color: rgb(187, 186, 186);
@@ -10,6 +11,7 @@
     padding: 0;
     top: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .contact-content{
@@ -48,18 +50,53 @@
     color: black;
     font-size: 30px;
     margin-left: auto;
-    background-color: white;
+   /* background-color: white;*/
     border-radius: 30px;
     width: 10%;
-    padding: 0.5rem 1.5rem;
+    /*padding: 0.5rem 1.5rem;*/
     text-align: center;
     transition: 0.3s ease;
     cursor: pointer;
 }
 
-.contact-btn:hover{
-    background-color: black;
+.contact-btn:hover .contact-circle{
+    fill: black;
+}
+
+.contact-btn:hover .contact-svg-content {
+    fill: white;
+}
+
+
+#contact-logo{
+    top:45%;
+    transform: translateY(-50%);
+    position:absolute;
+    stroke: white;
+    height:100%;
+    width: 60%;
+    z-index: 0;
+    overflow-x: hidden;
+    right: -50%;
+    /*transform: rotate(-50deg);*/
+    transform-origin: center;
+    z-index: -1;
+}
+
+.contact-section-titles{
     color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+.contact-circle{
+    fill: white;
+    transition: 0.3s;
+}
+
+.contact-svg-content{
+    transition: 0.3s;
 }
 
 
@@ -68,4 +105,23 @@
         width: 100%;
     }
 
+    #contact-logo{
+        top:50%;
+    }
+    
+
+}
+
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+    #contact-logo{
+        top:40%;
+    }
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1100px) {
+    #contact-logo{
+        top:30%;
+    }
 }

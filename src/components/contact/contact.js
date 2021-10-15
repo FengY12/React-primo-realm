@@ -1,37 +1,67 @@
 import React, { useEffect }from 'react'
 import "../contact/contact.css"
+import { ReactComponent as ContactSvg } from '../../assets/PrimoRealm_Contact.svg';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ReactComponent as EmailSvg } from '../../assets/contactLogo/email_logo.svg';
+import { ReactComponent as GitHubSvg } from '../../assets/contactLogo/GitHub_logo.svg';
+import { ReactComponent as LinkedinSvg } from '../../assets/contactLogo/Linkedin_logo.svg';
+
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Contact() {
     var email = "mailto:wz345@drexel.edu"
     var Linkedin = "https://www.linkedin.com/in/wenfeng-zhong-22bb061ba/"
 
+    
+    useEffect(() => {
+
+        gsap.fromTo("#contact-logo", {
+            rotate:0,
+            x:0
+        },{
+            scrollTrigger: {
+                trigger: ".contact-section",
+                toggleActions: "restart none none reverse",
+                start: "top center"
+            },
+            rotate: -50,
+            x:"-50%",
+            ease: "power1.out",
+            duration:2});
+
+    }, [])
+
 
 
     return(
-        <div class="contact-section" id="contact">
+        <div className="contact-section" id="contact">
             <h1 id="background-title"> Contact </h1>
 
 
-            <div class="contact-content">
+            <div className="contact-content">
                 <h1 id="contact-title">Me</h1>
 
-                <div class="contact-box">
-                    <div id="email-title">Email</div>
-                    <div class="contact-btn" onClick={() => window.open(email)}> I </div>
+                <div className="contact-box">
+                    <div className="contact-section-titles">Email</div>
+                    <div className="contact-btn" onClick={() => window.open(email)}> <EmailSvg id="email-svg"/> </div>
                 </div>
 
-                <div class="contact-box">
-                    <div>Linkedin</div>
-                    <div class="contact-btn" onClick={() => window.location.href = Linkedin}> I </div>
+                <div className="contact-box">
+                    <div className="contact-section-titles" >Linkedin</div>
+                    <div className="contact-btn" onClick={() => window.location.href = Linkedin}> <LinkedinSvg /> </div>
                 </div>
                 
-                <div class="contact-box">
-                    <div>Github</div>
-                    <div class="contact-btn"> I </div>
+                <div className="contact-box">
+                    <div className="contact-section-titles">Github</div>
+                    <div className="contact-btn"> <GitHubSvg id="git-svg"/> </div>
                 </div>
-
             </div>
 
+        <ContactSvg id="contact-logo"/>
+               
 
         
         

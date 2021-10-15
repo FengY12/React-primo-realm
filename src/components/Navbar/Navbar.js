@@ -1,4 +1,4 @@
-import React, { useEffect }from 'react'
+import React, { useEffect, useState }from 'react'
 import './Navbar.css'
 import { Link as LinkR } from "react-router-dom"
 import { Link, animationScroll as scroll } from "react-scroll";
@@ -10,6 +10,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 export default function Navbar() {
+
+    const [isMobile, setMobile] = useState(false);
+
+    useEffect(()=>{
+
+    window.addEventListener("resize", ()=>{
+        if (window.innerWidth < 700) {
+            setMobile(true)
+        } else{
+            setMobile(false)
+        }
+    });
+    //return () => window.removeEventListener("resize", updateWindowDimensions) 
+
+    console.log(isMobile)
+    console.log(window.innerWidth)
+
+    }, [window.innerWidth])
+
     useEffect(() => {
 
 
@@ -74,37 +93,41 @@ var tl = gsap.timeline({
         duration:"0.1"
     }, "<+0.3")
 */
-    }, [])
 
+
+
+
+    }, [])
+/* USE STATE TO ADJEST TO CONTROL THE OFFSET OF SCROLL INSTEAD*/ 
 
 
     return (
 
-        <nav class="nav-bar">
-        <div class="nav-container">
+        <nav className="nav-bar">
+        <div className="nav-container">
            <Link 
-                class="logo nav-items" 
+                className="logo nav-items" 
                 to="hero"
                 smooth={true}
                 offset={0}
                 duration={500}>
-           <YourSvg class="logo-pic"/>
+           <YourSvg className="logo-pic"/>
            
            </Link> 
            
            
            
 
-           <ul class="nav-list">
-               <li class="list-item">
+           <ul className="nav-list">
+               <li className="list-item">
            <Link
-           class="nav-items"
+           className="nav-items"
             id="nav-about"
             activeClass="active"
             to="about"
             smooth={true}
             spy={true}
-            offset={0}
+            offset={isMobile? -50 : 0}
             duration={500}
             > About </Link>
 </li>
@@ -113,22 +136,22 @@ var tl = gsap.timeline({
                 {/* <li>
                     <LinkR class="nav-item" to="/about">About</LinkR> 
                 </li> */}
-                <li class="list-item">
+                <li className="list-item">
                 <Link
-            class="nav-items"
+            className="nav-items"
             id="nav-projects"
             activeClass="active"
             to="projects"
             smooth={true}
             spy={true}
-            offset={0}
+            offset={isMobile? -50 : 0}
             duration={500}
             > Projects </Link>
                 </li>
 
-                <li class="list-item">
+                <li className="list-item">
                 <Link
-            class="nav-items"
+            className="nav-items"
             id="nav-contact"
             activeClass="active"
             to="contact"

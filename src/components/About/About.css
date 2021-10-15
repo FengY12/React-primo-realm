@@ -10,7 +10,6 @@
     padding: 0;
     top: 0;
     overflow-x: hidden;
-
 }
 
 #content-box {
@@ -69,4 +68,12 @@
     top: 15%;
     left:36%;
 
+}
+
+@media screen and (max-width: 800px) {
+    #primo-realm-title{
+        font-size: 4rem;
+        margin-top: 2rem;
+        color:deepskyblue;
+    }
 }

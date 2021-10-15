@@ -20,11 +20,12 @@ export const ProjectList = [
     },
     {
         image: [flower],
-        name: "Project 2",
-        urlName: "Project_Flower",
+        name: "Transaction Log App",
+        urlName: "Project_TransactionLog",
         projectType:"personal",
-        description: "Flower Project!!",
-        technologiesUsed:["Python"],
+        cardDescription:"A transcation logging application built with Spring framework that used CRUD operations to log transactions",
+        description: "A transaction logging application built with Spring framework that uses CRUD operations to add, remove, update and display transactions. By using Mybatis, the application can dynamically update the field specified without the need for prompt or inputting items in every field. The application uses Thymeleaf to render backend compoents from MySQL database and displays it in a HTML format in the frontend. Users will be able to send POST and GET requests from the frontend as well.",
+        technologiesUsed:["Java", "Spring Boot", "Spring MVC", "Mybatis", "Thymeleaf", "Lombok", "MySQL", ],
         
     },
     {

@@ -44,6 +44,29 @@ export default function PProject(props) {
             y:"20px",
             duration:0.8}
         )
+
+        gsap.from(".tech-used", {
+            scrollTrigger: {
+                trigger: ".technology-used-container",
+                toggleActions: "play reset none reverse",
+                start: "bottom 100%"
+            }, 
+            opacity: "0",
+            y:"15px",
+            duration:0.8
+        })
+        
+
+        gsap.to("#git-btn", {
+            scrollTrigger: {
+                trigger: "#content-container",
+                toggleActions: "restart reset none reverse",
+                start: "top center"
+            }, 
+            width:"300px",
+            fontSize:"1.5rem",
+           
+        })
         
         window.scrollTo(0, 0)
 
