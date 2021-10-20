@@ -59,8 +59,16 @@
     cursor: pointer;
 }
 
+.mail {
+    fill:white;
+}
+
 .contact-btn:hover .contact-circle{
     fill: black;
+}
+
+.contact-btn:hover .mail {
+    fill:black;
 }
 
 .contact-btn:hover .contact-svg-content {
@@ -92,11 +100,11 @@
 
 .contact-circle{
     fill: white;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .contact-svg-content{
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 
