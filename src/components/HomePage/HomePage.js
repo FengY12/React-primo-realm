@@ -56,10 +56,10 @@ function timeline() {
     }, "-=0.5").to(rule, {
       width: "0%",
       duration:0.8,
-    }, "-=1.7").to(subWelcomText, {
+    }, "-=1.6").to(subWelcomText, {
         width:"0%",
         duration:0.5
-    }, "-=1.3").to(scrollBar, {
+    }, "-=1.2").to(scrollBar, {
       display:"block"
     }, "=-1").set(".nav-bar", {
       display:"flex",

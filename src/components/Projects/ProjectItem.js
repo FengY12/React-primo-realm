@@ -13,9 +13,10 @@ export default function ProjectItem( {item} ) {
 
     return (
         <div className="project-item">
-            <div id="picture" style={{backgroundImage: `url(${item.image[0]})`}}>
-              
-             </div>
+            <div id="picture" style={{backgroundImage: `url(${item.cover})`}}> 
+            </div>
+            
+   
             <div id="card-text-section">
             <h1 id="name"> {item.name} </h1>
 

@@ -79,7 +79,7 @@ export default function LProject(props) {
         gsap.to(rule, {
             scrollTrigger: {
                 trigger: "#content-container",
-                toggleActions: "restart reset none reverse",
+                toggleActions: "restart reset none none",
                 start: "top center"
             }, 
             width: "0%",

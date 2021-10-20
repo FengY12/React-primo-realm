@@ -109,6 +109,10 @@
         top:50%;
     }
     
+    .contact-btn{
+        width: 3rem;
+    }
+    
 
 }
 
@@ -118,10 +122,25 @@
         top:40%;
     }
 
+    .contact-btn{
+        width: 3rem;
+    }
+
+    .contact-content{
+        margin-top: 5rem;
+    }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1100px) {
     #contact-logo{
         top:30%;
+    }
+
+    .contact-btn{
+        width: 4rem;
+    }
+
+    .contact-content{
+        margin-top: 10rem;
     }
 }

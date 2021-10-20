@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHistory } from "react-router-dom";
 import { ProjectList } from '../Projects/ProjectList';
 import './courseProjects.css';
@@ -19,16 +19,40 @@ export default function CProject(props) {
     var des = "";
     var img = [];
     var name;
-    var techUsed = [];
+    var skills, techUsed = [];
+
+    
+    const [picture, setPicture] = useState(0)
+
+    const nextPic = () => {
+        console.log("Clicked Next")
+        if (picture >= img.length-1) {
+            setPicture(0)
+        } else{
+        setPicture(prevPic => prevPic + 1)
+        }
+    }
+
+    const prevPic = () => {
+        console.log("Clicked Prev")
+        if (picture <= 0) {
+            setPicture(img.length-1)
+        } else{
+        setPicture(prevPic => prevPic - 1)
+        }
+    }
 
     useEffect(() => {
 
         var rule = CSSRulePlugin.getRule("#description-title:before")
+        let tl = new gsap.timeline()
+
+        tl.to(".btn", 0.8, {autoAlpha:"1"})
 
         gsap.to(rule, {
             scrollTrigger: {
                 trigger: "#content-container",
-                toggleActions: "restart reset none reverse",
+                toggleActions: "restart reset none none",
                 start: "top center"
             }, 
             width: "0%",
@@ -38,12 +62,24 @@ export default function CProject(props) {
             scrollTrigger: {
                 trigger: ".skills-container",
                 toggleActions: "play reset none reverse",
-                start: "top center"
+                start: "bottom 100%"
             }, 
             opacity: "0",
             y:"20px",
             duration:0.8}
         )
+
+
+        gsap.from(".tech-used", {
+            scrollTrigger: {
+                trigger: ".technology-used-container",
+                toggleActions: "play reset none reverse",
+                start: "bottom 100%"
+            }, 
+            opacity: "0",
+            y:"15px",
+            duration:0.8
+        })
         
         window.scrollTo(0, 0)
 
@@ -68,6 +104,7 @@ export default function CProject(props) {
             name = x.name
             des = x.description
             img = x.image
+            skills = x.skills
             techUsed = x.technologiesUsed
 
         }
@@ -84,10 +121,26 @@ export default function CProject(props) {
             {isType()?
             <div id="content-container">
             <div id="img-container">
+                <img src={img[picture]}> 
+
+                
+                </img>
+                {/*}
                 {img.map(ig => (
             <img src={ig}></img>
             ))
-        }
+        }   
+    */}
+   
+            <button class="btn" id="next-btn" onClick={nextPic}>
+                Next
+            </button>
+
+            <button class="btn" id="prev-btn" onClick={prevPic}>
+                Prev
+            </button>
+   
+
             </div>
 
         <div class="text-section">
@@ -101,6 +154,17 @@ export default function CProject(props) {
                 <h2 class="titles" id="description-title">Description</h2>
                 <p id="project-description">{des}</p>
             </div>
+
+            <div class="skills-container">
+                <h2 class="titles"> Skill Used </h2>
+                <div class="project-skill">
+                {skills.map(skill => (
+                 <p class="skill"> - {skill} </p>
+                ))
+            }
+            </div>
+            </div>
+
             
             <div class="technology-used-container">
                 <h2 class="titles"> Technologies Used </h2>

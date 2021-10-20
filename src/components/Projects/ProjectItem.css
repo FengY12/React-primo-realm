@@ -36,6 +36,8 @@
     min-height: 10rem;
     min-width: 5rem;
     transition: 0.3s;
+    background-size: 150%;
+    background-position:center;
 }
 
 .project-item:hover #picture{

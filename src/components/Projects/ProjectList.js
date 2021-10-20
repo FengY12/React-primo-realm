@@ -1,15 +1,20 @@
-import tree from "../../assets/tree.jpg";
 import flower from "../../assets/flower.jpg";
-import tree2 from "../../assets/tree2.jpg";
-import maze from "../../assets/backtrackLproject/maze.PNG";
-import maze_sum from "../../assets/backtrackLproject/maze_sum.PNG";
-import maze_fun from "../../assets/backtrackLproject/maze_fun.PNG";
+import maze from "../../assets/backTrackLProject/maze.PNG";
+import maze_fun from "../../assets/backTrackLProject/maze_fun.PNG";
+import csvEditorDiagram from "../../assets/csvEditorProject/csvEditor_diagram.PNG"; 
+import csvEditorMenu from "../../assets/csvEditorProject/csvEditor.PNG";
+import csvEditorDisplay from "../../assets/csvEditorProject/csvEditor_display.PNG";
+import transLog from "../../assets/csvEditorProject/TransLog_icon.svg";
+import csvIcon from "../../assets/csvEditorProject/csvEditor_icon.svg";
+
+
 
 
 export const ProjectList = [
 
     {
         image: [maze, maze_fun],
+        cover: maze,
         name: "Backtracking",
         urlName: "Project_Backtrack",
         projectType:"learn",
@@ -20,6 +25,7 @@ export const ProjectList = [
     },
     {
         image: [flower],
+        cover: transLog,
         name: "Transaction Log App",
         urlName: "Project_TransactionLog",
         projectType:"personal",
@@ -29,18 +35,20 @@ export const ProjectList = [
         
     },
     {
-        image: [""],
-        name: "Tree",
-        urlName: "Project2",
-        projectType:"learn",
-        description: "3rd Project Lol",
-        cardDescription:"3rd Projects on card",
-        skills: ["Flower", "Tree"],
-        technologiesUsed:["Java"],
+        image: [csvEditorMenu, csvEditorDisplay, csvEditorDiagram],
+        cover: csvIcon,
+        name: "CSV Editor",
+        urlName: "csv_Editor",
+        projectType:"course",
+        description: "A simple CSV file editor that allows user to view and make quick changes. It allows the user to load CSV files with any delimiter they want and view the file with delimiter attached. It also have features that allow the user to display a specify row, column or item.",
+        cardDescription:"A simple CSV file editor that allows user to view and make quick changes. It can also display or edit a specify item",
+        skills: ["Python Tkinter GUI", "CSV file reading, parsing and saving", "CSV file editing and displaying", "UML Diagram", "Software Design Documentation"],
+        technologiesUsed:["Python", "Python Tkinter"],
 
     },
     {
         image: [""],
+        cover: "",
         name: "Project 4",
         urlName: "Project2",
         projectType:"personal",
@@ -50,6 +58,7 @@ export const ProjectList = [
     },
     {
         image: [""],
+        cover: "",
         name: "Project 5",
         urlName: "Project_course",
         projectType:"course",

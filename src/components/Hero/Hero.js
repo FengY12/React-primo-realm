@@ -60,7 +60,7 @@ export default function Hero() {
             <div id="test">
             <h1 id="welcome-title" className="welcome-title"> Welcome to </h1>
             <div id="line"> </div>
-            <h2 id="sub-welcome-title">Hub for Feng's Projects</h2>
+            <h2 id="sub-welcome-title">Feng's Project Hub</h2>
             </div>
             
         </div>
