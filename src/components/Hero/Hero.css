@@ -34,11 +34,11 @@
 }
 
 .landing-logo > #landing-Left_top{
-    stroke: deepskyblue;
+    /*stroke: deepskyblue;*/
 }
 
 .landing-logo > #landing-Right_top{
-    stroke: deepskyblue;
+    /*stroke: deepskyblue;*/
 }
 
 
@@ -141,6 +141,7 @@
 
 .load{
     z-index: 999;
+    overflow: hidden;
     position: absolute;
     background-color: black;
     height: 100%;

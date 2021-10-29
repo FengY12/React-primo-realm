@@ -45,7 +45,7 @@
     position: fixed;
     background-color: rgb(31, 31, 31);
     /*background-color: transparent;*/
-    width: 15%;
+    width: 5%;
     min-width: 200px;
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
@@ -68,7 +68,7 @@
 
 #back-btn {
     font-size: 1rem;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 4rem;
     border-radius: 40px;
     background-color: transparent;
     border: 2px solid white;
@@ -314,7 +314,7 @@ footer{
 
     #back-btn {
         font-size: 1rem;
-        padding: 10px 25px;
+        padding: 10px 4rem;
     }
     
     #home-btn {
@@ -323,7 +323,7 @@ footer{
     }
 
     #nav-bar{
-        width: 65%;
+        width: 3%;
     }
 
     .titles {
@@ -344,9 +344,13 @@ footer{
         width: 30%;
     }
 
+    #nav-bar{
+        width: 3%;
+    }
+    
     #back-btn {
         font-size: 1rem;
-        padding: 10px 25px;
+        padding: 10px 4rem;
     }
     
     #home-btn {
@@ -365,5 +369,42 @@ footer{
         height: 500px;
   
     }
-
 }
+
+    @media screen and (min-width: 1024px) and (max-width: 1400px) {
+    
+        #img-container{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }   
+    
+        img{
+            width: 100%;
+            height: 500px;
+      
+        }
+
+        .btn-cont{
+            margin-top: 2rem;
+            position: relative;
+            height: 1rem;
+            width: 100%;
+        }
+    
+        #back-btn {
+            font-size: 1rem;
+            padding: 10px 4rem;
+        }
+        
+        #home-btn {
+            font-size: 1rem;
+            padding: 10px 25px;
+        }
+
+        #nav-bar{
+            width: 3%;
+        }
+
+    }
+

@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from 'react';
+import React, {useContext, useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import Hero from '../Hero/Hero';
 import About from '../About/About'
@@ -10,12 +10,16 @@ import { CSSRulePlugin } from 'gsap/all';
 
 
 import ScrollMagic from 'scrollmagic';
+import { LoadContext } from '../Utils/LoadContext';
 
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(CSSRulePlugin);
 
 export default function HomPage() {
+
+  const { load, setLoad } = useContext(LoadContext);
+
 
   const [clicked, setclick] = useState(0);
 
@@ -32,7 +36,6 @@ export default function HomPage() {
         duration:0.8,
       delay:1.5});
 */
-
 
 
 var tl = gsap.timeline()
@@ -72,55 +75,6 @@ function timeline() {
 
   } 
   
-  /*
-    if (window.scrollY===0) {
-      window.scrollTo(0, 0);
-      tl.play(0);
- }*/
-
-
- /*
-  tl2.from(["#landing-Left_top", "#landing-Right_top"], {
-      y:-20,
-      duration:1
-      
-  }).to(["#landing-Left_top", "#landing-Right_top"], {
-      y:-20,
-      duration:1,
-      ease:"sine.inOut"
-  }).repeat(-1).yoyo(true)
-*/
-
-/*
-  var tl3 = gsap.timeline()
-        tl3.fromTo("#main-body", { 
-          autoAlpha: 0,
-          y:-100
-        }, {
-          y:0,
-          autoAlpha:1,
-          duration:2,
-          delay:2.5,
-        }).fromTo(["#landing-Left_top", "#landing-Right_top"], {
-            autoAlpha:0,
-            y:200
-        }, {
-          y:-20,
-          autoAlpha:1,
-          duration:1,
-        }, "-=2").fromTo(["#landing-Left_bot", "#landing-Right_bot"], {
-            autoAlpha:0,
-            y:200
-        }, {
-          stagger: {
-            amount:1
-          },
-          y:0,
-          autoAlpha:1,
-          duration:1,
-        })
-*/
- 
 
 
 document.getElementById("load").onclick = () => {
@@ -132,9 +86,22 @@ document.getElementById("load").onclick = () => {
   }
 }
 
+if (load) {
+  timeline()
+} else {
+  tl.set([".splashLogo", ".load"],{
+    autoAlpha:0
+  }).set(".nav-bar", {
+    display:"flex",
+  }, "-=1").to(".nav-items", {
+    stagger: {
+      amount:1
+    },
+      opacity:1,
+      
+  }, "-=1");
 
-timeline()
-
+}
 
 /*
  if (window.scrollY===0) {
@@ -168,7 +135,7 @@ useEffect(() => {
       autoAlpha:0,
       y:20
   }, {
-    y:-20,
+    y:0,
     autoAlpha:1,
     duration:1,
   }, "-=2").fromTo(["#landing-Left_bot", "#landing-Right_bot"], {
@@ -181,10 +148,10 @@ useEffect(() => {
     y:0,
     autoAlpha:1,
     duration:1,
-  })
+  }, "-=1.5")
 
   var tl2 = gsap.timeline({paused:true})
-
+/*
   tl2.from(["#landing-Left_top", "#landing-Right_top"], {
     y:-20,
     duration:1
@@ -194,15 +161,18 @@ useEffect(() => {
     duration:1,
     ease:"sine.inOut"
 }).repeat(-1).yoyo(true)
-
+*/
 
 tl3.eventCallback("onComplete", function() {
   tl2.play(0);
 });
 
+
+
+
 },[])
 
-
+  
 
 
   return (

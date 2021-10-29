@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { useHistory } from "react-router-dom";
 import { ProjectList } from '../Projects/ProjectList';
 import './courseProjects.css';
@@ -8,6 +8,8 @@ import ProjectNotFound from '../errorPage/projectNotFound';
 import { gsap } from "gsap";
 import { ScrollTrigger} from "gsap/ScrollTrigger";
 import { CSSRulePlugin } from 'gsap/all';
+import { LoadContext } from '../Utils/LoadContext';
+
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(CSSRulePlugin);
@@ -23,6 +25,8 @@ export default function CProject(props) {
 
     
     const [picture, setPicture] = useState(0)
+    const { load, setLoad } = useContext(LoadContext);
+
 
     const nextPic = () => {
         console.log("Clicked Next")
@@ -43,7 +47,7 @@ export default function CProject(props) {
     }
 
     useEffect(() => {
-
+        setLoad(false);
         var rule = CSSRulePlugin.getRule("#description-title:before")
         let tl = new gsap.timeline()
 
@@ -116,7 +120,7 @@ export default function CProject(props) {
         <div class="LProject-page">
             <div id="nav-bar">
             <button id="back-btn" onClick={() => history.goBack()}>Back</button>
-            <a id="home-btn"href="/">Home</a>
+            {/*<a id="home-btn"href="/">Home</a>*/}
             </div>
             {isType()?
             <div id="content-container">
