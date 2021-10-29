@@ -67,7 +67,7 @@ export const ProjectList = [
         image: [projectChatLogin,projectChatReg,projectChathomeRoom, projectChatChat, projectChatDB],
         cover: chatAppIcon,
         name: "Chatting Application",
-        urlName: "chattapp",
+        urlName: "chatapp",
         projectType:"course",
         cardDescription:"A live chatting website built with Node JS for quick temporary chat rooms. It also features an encrypted user anthentication system",
         description: "A live chatting website built with Node JS for quick temporary chat rooms. It features an encrypted user anthentication system using Bcrypt. The application mainly uses Express as the back-end for request handling and SQL connection and Socket.io for the live chat capability",
