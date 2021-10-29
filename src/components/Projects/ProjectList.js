@@ -1,6 +1,3 @@
-import flower from "../../assets/flower.jpg";
-import maze from "../../assets/backTrackLProject/maze.PNG";
-import maze_fun from "../../assets/backTrackLProject/maze_fun.PNG";
 import csvEditorDiagram from "../../assets/csvEditorProject/csvEditor_diagram.PNG"; 
 import csvEditorMenu from "../../assets/csvEditorProject/csvEditor.PNG";
 import csvEditorDisplay from "../../assets/csvEditorProject/csvEditor_display.PNG";
@@ -31,20 +28,6 @@ import chatAppIcon from "../../assets/chatAppProject/chatApp_logo.svg";
 
 
 export const ProjectList = [
-/*
-    {
-        
-        image: [maze, maze_fun],
-        cover: maze,
-        name: "Backtracking",
-        urlName: "backtrack",
-        projectType:"learn",
-        cardDescription:"A backtracking algorithm learning project about how the algorithm works",
-        description: "This is a learning project about backtracking algorithm. Backtracking algorithm is an useful algorithm for solving problems like Sudoku and Maze puzzles due to the fact that it uses recursions to solve for the next cell base on the previous cell.",
-        skills: ["Backtracking algorithm", "How recursion works in a backtracking algorithm", "Using backtracking algorithm to solve a Sudoku board", "Using backtracking algorithm to solve a maze"],
-        technologiesUsed:["Python"],
-    },
-    */
     {
         image: [transLogIndex, transLogViewSpecific, transLogAdd],
         cover: transLog,
