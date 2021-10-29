@@ -105,6 +105,7 @@
     color: rgb(241, 241, 241);
     text-decoration: none;
     margin-top: auto;
+    -webkit-margin-top: auto;
     margin-bottom: 8%;
     background-color: transparent;
     border-radius: 20px;
