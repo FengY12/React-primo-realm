@@ -57,9 +57,10 @@ export default function Contact() {
                 <div className="contact-box">
                     <div className="contact-section-titles">Github</div>
                     <div className="contact-btn"  onClick={() => window.location.href = Github}> <GitHubSvg className="contact-btn-logo" id="git-svg"/> </div>
+                    <GitHubSvg className="contact-btn-logo" id="git-svg"/>
+
                 </div>
             </div>
-            <GitHubSvg className="contact-btn-logo" id="git-svg"/>
 
         <ContactSvg id="contact-logo"/>
                
