@@ -50,6 +50,7 @@
 
 .project-item{
     display: flex;
+    height: 30rem;
     flex-direction: column;
     /*border: 2px solid white;*/
     background-color: rgba(19, 19, 19, 0.8);
@@ -102,8 +103,10 @@
 }
 
 #link {
+    display: block;
     color: rgb(241, 241, 241);
     text-decoration: none;
+    /*margin-top: auto;*/
     margin-top: auto;
     -webkit-margin-top: auto;
     margin-bottom: 8%;
