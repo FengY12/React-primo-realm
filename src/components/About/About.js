@@ -52,7 +52,7 @@ export default function About() {
 
             <div className="text-container">
             <p className="about-content" id="personal-about-content">
-                Hello everyone, my name is Feng, I am a Pre-Junior in Drexel University majoring in Software Engineering.
+                Hello, my name is Feng, I am a Pre-Junior in Drexel University majoring in Software Engineering.
                 I have a strong interest in new technologies and I am always curious to discover and learn about new
                 ideas for the present and the future. Other than coding, I am also interested in creating vector designs
                 and 3D models, because it feels accomplishing to be able to create something by myself.
@@ -69,10 +69,10 @@ export default function About() {
             </div>   
             <div className="text-container">
             <p className="about-content" id="primo-about-content">
-                Primo Realm is my main personal website and the hub for all my personal projects. 
-                The website is built with React.JS and other JavaScript libraries such as GSAP for animation. The incentive of creating Primo Realm was to not only
+                Welcome to Primo Realm! Primo Realm is my main personal website and the hub for all my personal projects. 
+                The website is built with React.JS and other JavaScript libraries such as GSAP for animation. The purpose of creating Primo Realm was to not only
                 have a place to display all my projects, but also
-                a testament on what kind of website I can make from scratch.
+                a testament on the kind of website I can make from scratch.
                 
             </p>
             </div>
