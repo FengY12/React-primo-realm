@@ -46,8 +46,8 @@ export const ProjectList = [
         name: "CSV Editor",
         urlName: "csv_editor",
         projectType:"course",
-        description: "A simple CSV file editor built with Python that allows user to view and make quick changes. It allows the user to load CSV files with any delimiter they want and view the file with delimiter attached. It also have features that allow the user to display a specify row, column or item. Other than displaying and editing, users can also load/ save files with a click of a button",
-        cardDescription:"A simple CSV file editor built with Python that allows user to view and make quick changes. It can also display or edit a specify item",
+        description: "A simple CSV file editor built with Python that allows user to view and make quick changes. It allows the user to load CSV files with any delimiter they want and view the file with delimiter attached. It also have features that allow the user to display a specific row, column or item. Other than displaying and editing, users can also load/ save files with a click of a button",
+        cardDescription:"A simple CSV file editor built with Python that allows user to view and make quick changes. It can also display or edit a specific item",
         skills: ["Python Tkinter GUI", "CSV file reading, parsing and saving", "CSV file editing and displaying", "UML Diagram", "Software Design Documentation"],
         technologiesUsed:["Python", "Python Tkinter"],
 

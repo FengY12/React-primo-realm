@@ -75,7 +75,8 @@
     
     #projects-container{
         overflow-x: scroll;
-        overflow-y: none;
+        overflow-y: hidden;
+        -webkit-overflow-y: none;
         display: flex;
         justify-items:center;
         justify-content: space-between;
