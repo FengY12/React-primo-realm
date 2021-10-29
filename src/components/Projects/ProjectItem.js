@@ -1,9 +1,8 @@
 import React from 'react';
 import './ProjectItem.css';
 import { Link as LinkR } from "react-router-dom"
-import hero from '../Hero/Hero'
 
-{/*export default function ProjectItem( { image, name, urlName, description }) { */}
+/*export default function ProjectItem( { image, name, urlName, description }) { */
 
 
 

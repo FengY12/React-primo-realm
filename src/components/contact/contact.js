@@ -14,7 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Contact() {
     var email = "mailto:wz345@drexel.edu"
     var Linkedin = "https://www.linkedin.com/in/wenfeng-zhong-22bb061ba/"
-
+    var Github = "https://github.com/Fengyzh"
     
     useEffect(() => {
 
@@ -56,7 +56,7 @@ export default function Contact() {
                 
                 <div className="contact-box">
                     <div className="contact-section-titles">Github</div>
-                    <div className="contact-btn"> <GitHubSvg className="contact-btn-logo" id="git-svg"/> </div>
+                    <div className="contact-btn"  onClick={() => window.location.href = Github}> <GitHubSvg className="contact-btn-logo" id="git-svg"/> </div>
                 </div>
             </div>
 

@@ -14,7 +14,6 @@ gsap.registerPlugin(CSSRulePlugin);
 export default function Hero() {
 
     useEffect(() => {
-        var rule = CSSRulePlugin.getRule(".welcome-title:before")
 /*
         gsap.to(rule, {
             scrollTrigger: {
@@ -50,14 +49,11 @@ export default function Hero() {
         <div className="hero-section" id="hero">
             <div className="load" id="load">
             <SplashSvg className="splashLogo"/>
-            {/*<h1 id="load-title">
-                AOD
-                <SplashSvg class="splashLogo"/>
-    </h1>*/}
+
         </div>
             <LandingSvg className="landing-logo"/>
             <h1 id="hero-title"> PRIMO REALM </h1>
-            <div id="test">
+            <div id="welcome-container">
             <h1 id="welcome-title" className="welcome-title"> Welcome to </h1>
             <div id="line"> </div>
             <h2 id="sub-welcome-title">Feng's Project Hub</h2>

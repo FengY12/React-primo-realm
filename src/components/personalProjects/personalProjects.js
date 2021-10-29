@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHistory } from "react-router-dom";
 import { ProjectList } from '../Projects/ProjectList';
 import './personalProjects.css';
@@ -19,11 +19,35 @@ export default function PProject(props) {
     var des = "";
     var img = [];
     var name;
-    var techUsed = [];
+    var techUsed, skills = [];
+    var gitLink = "";
+
+
+    const [picture, setPicture] = useState(0)
+
+    const nextPic = () => {
+        console.log("Clicked Next")
+        if (picture >= img.length-1) {
+            setPicture(0)
+        } else{
+        setPicture(prevPic => prevPic + 1)
+        }
+    }
+
+    const prevPic = () => {
+        console.log("Clicked Prev")
+        if (picture <= 0) {
+            setPicture(img.length-1)
+        } else{
+        setPicture(prevPic => prevPic - 1)
+        }
+    }
 
     useEffect(() => {
-
         var rule = CSSRulePlugin.getRule("#description-title:before")
+        let tl = new gsap.timeline()
+
+        tl.to(".btn", 0.8, {autoAlpha:"1"})
 
         gsap.to(rule, {
             scrollTrigger: {
@@ -77,7 +101,7 @@ export default function PProject(props) {
     function isType() {
         console.log(props)
         for (let x of ProjectList) {
-            if (x.urlName == props.match.params.name && x.projectType=="personal") {
+            if (x.urlName === props.match.params.name && x.projectType === "personal") {
                 return true
             
             }
@@ -87,11 +111,13 @@ export default function PProject(props) {
 
 
     for (let x of ProjectList) {
-        if (x.urlName == props.match.params.name && x.projectType=="personal") {
+        if (x.urlName === props.match.params.name && x.projectType === "personal") {
             name = x.name
             des = x.description
             img = x.image
             techUsed = x.technologiesUsed
+            gitLink = x.github
+            skills = x.skills
 
         }
     }
@@ -107,14 +133,33 @@ export default function PProject(props) {
             {isType()?
             <div id="content-container">
             <div id="img-container">
+                <img src={img[picture]} alt="Could not be loaded"> 
+
+                
+                </img>
+                {/*}
                 {img.map(ig => (
             <img src={ig}></img>
             ))
-        }
-            </div>
+        }   
+    */}
+   <div class="btn-cont">
+            <button class="btn" id="next-btn" onClick={nextPic}>
+                Next
+            </button>
+
+            <button class="btn" id="prev-btn" onClick={prevPic}>
+                Prev
+            </button>
+   </div>
+
+    </div>
 
         <div class="text-section">
-            {isType()? <div class="title-section"><h1 id="project-title"> {name} </h1> <button id="git-btn"> View on GitHub </button></div>: <h1 id="project-title">No Project Found</h1>}
+            {isType()? <div class="title-section">
+                <h1 id="project-title"> {name} </h1> 
+                <button id="git-btn" onClick={() => window.location.href = gitLink}> View on GitHub </button>
+                </div>: <h1 id="project-title">No Project Found</h1>}
         {/*
             <h1 id="project-title"> {isEmpty()? name : "No Project Found"} </h1>
         */}
@@ -125,11 +170,22 @@ export default function PProject(props) {
                 <p id="project-description">{des}</p>
             </div>
             
+            <div class="skills-container">
+                <h2 class="titles"> Skills Used </h2>
+                <div class="project-skill">
+                {skills.map(skill => (
+                 <p class="skill"> - {skill} </p>
+                ))
+            }
+            </div>
+            </div>
+
+
             <div class="technology-used-container">
                 <h2 class="titles"> Technologies Used </h2>
                 {techUsed.map(tech => (
                     <div class="tech-used-container">
-                 <p class="tech-used"> - {tech} {IconExist(tech)? <img class="icons"src={Icons(tech)}></img> : ""} </p>
+                 <p class="tech-used"> - {tech} {IconExist(tech)? <img class="icons"src={Icons(tech)} alt="Could not be loaded"></img> : ""} </p>
                  </div>
                 ))
                 }

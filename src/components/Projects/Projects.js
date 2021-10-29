@@ -14,7 +14,7 @@ export default function Projects() {
             <div id="projects-container">
             
                 {ProjectList.map((item, key) => {
-                    {/* return <ProjectItem image={item.image} name={item.name} urlName = {item.urlName} description={item.description}/>*/}
+                    /* return <ProjectItem image={item.image} name={item.name} urlName = {item.urlName} description={item.description}/>*/
                     return <ProjectItem key= {key} item = {item}  />
                 })}
 

@@ -27,7 +27,7 @@ export default function LProject(props) {
     function isType() {
         console.log(props)
         for (let x of ProjectList) {
-            if (x.urlName == props.match.params.name && x.projectType=="learn") {
+            if (x.urlName === props.match.params.name && x.projectType ==="learn") {
                 return true
             
             }
@@ -36,7 +36,7 @@ export default function LProject(props) {
     }
 
     for (let x of ProjectList) {
-        if (x.urlName == props.match.params.name && x.projectType=="learn") {
+        if (x.urlName === props.match.params.name && x.projectType === "learn") {
             name = x.name
             des = x.description
             img = x.image
@@ -156,7 +156,7 @@ export default function LProject(props) {
         {isType()?
             <div id="content-container">
             <div id="img-container">
-                <img src={img[picture]}> 
+                <img src={img[picture]} alt="Could not be loaded"> 
 
                 
                 </img>
@@ -166,7 +166,7 @@ export default function LProject(props) {
             ))
         }   
     */}
-   
+    <div class="btn-cont">
             <button class="btn" id="next-btn" onClick={nextPic}>
                 Next
             </button>
@@ -174,12 +174,16 @@ export default function LProject(props) {
             <button class="btn" id="prev-btn" onClick={prevPic}>
                 Prev
             </button>
-   
+   </div>
 
             </div>
     
         <div class="text-section">
-            {isType()? <div class="title-section"><h1 id="project-title"> {name} </h1> <button id="git-btn"> View on GitHub </button></div>: <h1 id="project-title">No Project Found</h1>}
+            {isType()? 
+            <div class="title-section">
+                <h1 id="project-title"> {name} </h1> 
+                {/*<button id="git-btn"> View on GitHub </button>*/}
+            </div>: <h1 id="project-title">No Project Found</h1>}
         {/*
             <h1 id="project-title"> {isEmpty()? name : "No Project Found"} </h1>
         */}
@@ -205,7 +209,7 @@ export default function LProject(props) {
                 <h2 class="titles"> Technologies Used </h2>
                 {techUsed.map(tech => (
                     <div class="tech-used-container">
-                 <p class="tech-used"> - {tech} {IconExist(tech)? <img class="icons"src={Icons(tech)}></img> : ""} </p>
+                 <p class="tech-used"> - {tech} {IconExist(tech)? <img class="icons"src={Icons(tech)} alt="Could not be loaded"></img> : ""} </p>
                  </div>
                 ))
                 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState }from 'react'
 import './Navbar.css'
-import { Link as LinkR } from "react-router-dom"
 import { Link, animationScroll as scroll } from "react-scroll";
 import { ReactComponent as YourSvg } from '../../assets/la.svg';
 import { gsap } from "gsap";
@@ -32,7 +31,6 @@ export default function Navbar() {
     useEffect(() => {
 
 
-    var tl = gsap.timeline()
    
     /*
     tl.to(".nav-items", {

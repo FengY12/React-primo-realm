@@ -5,7 +5,7 @@ import LProject from './components/LearningProjects/learningProjects';
 import HomPage from './components/HomePage/HomePage';
 import PProject from './components/personalProjects/personalProjects';
 import CProject from './components/courseProjects/courseProjects';
-import { ProjectList } from './components/Projects/ProjectList';
+
 
 
 
@@ -17,15 +17,6 @@ function App() {
 
   }, [])
 
-
-  function existProject(name){
-      for (let x in ProjectList) {
-        if (x.urlName == name) {
-          return true
-        }
-      }
-      return false
-  }
 
 
 

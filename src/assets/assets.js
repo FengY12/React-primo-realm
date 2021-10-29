@@ -1,4 +1,3 @@
-import PythonLogo from '../assets/Python.svg'; 
 import PythonMono from '../assets/Icons/Python_mono.svg';
 
 var IconDict = {

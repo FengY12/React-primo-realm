@@ -1,4 +1,3 @@
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import React, {useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import Hero from '../Hero/Hero';
@@ -79,7 +78,6 @@ function timeline() {
       tl.play(0);
  }*/
 
-  var tl2 = gsap.timeline({paused:true})
 
  /*
   tl2.from(["#landing-Left_top", "#landing-Right_top"], {

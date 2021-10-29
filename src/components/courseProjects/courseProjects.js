@@ -74,7 +74,7 @@ export default function CProject(props) {
             scrollTrigger: {
                 trigger: ".technology-used-container",
                 toggleActions: "play reset none reverse",
-                start: "bottom 100%"
+                start: "bottom bottom"
             }, 
             opacity: "0",
             y:"15px",
@@ -90,7 +90,7 @@ export default function CProject(props) {
     function isType() {
         console.log(props)
         for (let x of ProjectList) {
-            if (x.urlName == props.match.params.name && x.projectType=="course") {
+            if (x.urlName === props.match.params.name && x.projectType === "course") {
                 return true
             
             }
@@ -100,7 +100,7 @@ export default function CProject(props) {
 
 
     for (let x of ProjectList) {
-        if (x.urlName == props.match.params.name && x.projectType=="course") {
+        if (x.urlName === props.match.params.name && x.projectType === "course") {
             name = x.name
             des = x.description
             img = x.image
@@ -121,7 +121,7 @@ export default function CProject(props) {
             {isType()?
             <div id="content-container">
             <div id="img-container">
-                <img src={img[picture]}> 
+                <img src={img[picture]} alt="Could not be loaded"> 
 
                 
                 </img>
@@ -131,7 +131,7 @@ export default function CProject(props) {
             ))
         }   
     */}
-   
+   <div class="btn-cont">
             <button class="btn" id="next-btn" onClick={nextPic}>
                 Next
             </button>
@@ -139,7 +139,7 @@ export default function CProject(props) {
             <button class="btn" id="prev-btn" onClick={prevPic}>
                 Prev
             </button>
-   
+   </div>
 
             </div>
 
@@ -170,7 +170,7 @@ export default function CProject(props) {
                 <h2 class="titles"> Technologies Used </h2>
                 {techUsed.map(tech => (
                     <div class="tech-used-container">
-                 <p class="tech-used"> - {tech} {IconExist(tech)? <img class="icons"src={Icons(tech)}></img> : ""} </p>
+                 <p class="tech-used"> - {tech} {IconExist(tech)? <img class="icons"src={Icons(tech)} alt="Could not be loaded"></img> : ""} </p>
                  </div>
                 ))
                 }
