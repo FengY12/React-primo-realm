@@ -59,7 +59,7 @@ export default function PProject(props) {
         gsap.to(rule, {
             scrollTrigger: {
                 trigger: "#content-container",
-                toggleActions: "restart reset none reverse",
+                toggleActions: "restart none none reverse",
                 start: "top center"
             }, 
             width: "0%",
@@ -91,7 +91,7 @@ export default function PProject(props) {
         gsap.to("#git-btn", {
             scrollTrigger: {
                 trigger: "#content-container",
-                toggleActions: "restart reset none reverse",
+                toggleActions: "restart none none reverse",
                 start: "top center"
             }, 
             width:"300px",

@@ -56,7 +56,7 @@ export default function CProject(props) {
         gsap.to(rule, {
             scrollTrigger: {
                 trigger: "#content-container",
-                toggleActions: "restart reset none none",
+                toggleActions: "restart none none none",
                 start: "top center"
             }, 
             width: "0%",
