@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ReactComponent as EmailSvg } from '../../assets/contactLogo/email_logo.svg';
 import { ReactComponent as GitHubSvg } from '../../assets/contactLogo/GitHub_logo.svg';
 import { ReactComponent as LinkedinSvg } from '../../assets/contactLogo/Linkedin_logo.svg';
-
+import test from "../../assets/contactLogo/GitHub_logo.svg";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -57,7 +57,6 @@ export default function Contact() {
                 <div className="contact-box">
                     <div className="contact-section-titles">Github</div>
                     <div className="contact-btn"  onClick={() => window.location.href = Github}> <GitHubSvg className="contact-btn-logo" id="git-svg"/> </div>
-                    <GitHubSvg className="contact-btn-logo" id="git-svg"/>
 
                 </div>
             </div>
