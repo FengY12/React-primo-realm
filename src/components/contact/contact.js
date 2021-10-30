@@ -46,12 +46,12 @@ export default function Contact() {
 
                 <div className="contact-box" onClick={() => window.open(email)}>
                     <div className="contact-section-titles">Email</div>
-                    <div className="contact-btn"> <EmailSvg className="contact-btn-logo" id="email-svg"/> </div>
+                   <EmailSvg className="contact-btn-logo" id="email-svg"/>
                 </div>
 
                 <div className="contact-box" onClick={() => window.location.href = Linkedin}>
                     <div className="contact-section-titles" >Linkedin</div>
-                    <div className="contact-btn" > <LinkedinSvg className="contact-btn-logo"/> </div>
+                    <LinkedinSvg className="contact-btn-logo"/>
                 </div>
                 
                 <div className="contact-box" onClick={() => window.location.href = Github}>
