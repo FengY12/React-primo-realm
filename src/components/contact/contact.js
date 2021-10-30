@@ -54,9 +54,9 @@ export default function Contact() {
                     <div className="contact-btn" onClick={() => window.location.href = Linkedin}> <LinkedinSvg className="contact-btn-logo"/> </div>
                 </div>
                 
-                <div className="contact-box">
+                <div className="contact-box" onClick={() => window.location.href = Github}>
                     <div className="contact-section-titles">Github</div>
-                    <div className="contact-btn"  onClick={() => window.location.href = Github}> <GitHubSvg className="contact-btn-logo" id="git-svg"/> </div>
+                    <div className="contact-btn"> <GitHubSvg className="contact-btn-logo" id="git-svg"/> </div>
 
                 </div>
             </div>
