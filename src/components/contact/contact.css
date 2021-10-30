@@ -40,9 +40,16 @@
     padding: 1rem 1.8rem;
     border-radius: 40px;
     margin-top: 3rem;
-   /* display: flex;*/
+    display: flex;
     align-items: center;
     cursor: pointer;
+}
+
+
+.contact-btn-logo{
+    display: block;
+    width: 3rem;
+    margin-left: auto;
 }
 
 .contact-btn{
@@ -64,7 +71,7 @@
     fill:white;
 }
 
-.contact-btn:hover .contact-circle{
+.contact-btn-logo:hover .contact-circle{
     fill: black;
 }
 
@@ -72,7 +79,7 @@
     fill:black;
 }
 
-.contact-btn:hover .contact-svg-content {
+.contact-btn-logo:hover .contact-svg-content {
     fill: white;
 }
 
