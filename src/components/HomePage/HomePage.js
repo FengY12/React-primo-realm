@@ -71,7 +71,7 @@ function timeline() {
       },
         opacity:1,
         
-    }, "-=1");
+    }, "-=1")
 
   } 
   
@@ -91,7 +91,13 @@ if (load) {
 } else {
   tl.set([".splashLogo", ".load"],{
     autoAlpha:0
-  }).set(".nav-bar", {
+  }).to(rule, {
+    width: "0%",
+    duration:0.8,
+  }, "-=1").to(subWelcomText, {
+      width:"0%",
+      duration:0.5
+  }, "-=1").set(".nav-bar", {
     display:"flex",
   }, "-=1").to(".nav-items", {
     stagger: {

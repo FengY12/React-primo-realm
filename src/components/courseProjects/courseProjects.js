@@ -56,12 +56,23 @@ export default function CProject(props) {
         gsap.to(rule, {
             scrollTrigger: {
                 trigger: "#content-container",
-                toggleActions: "restart none none none",
+                toggleActions: "play none none none",
                 start: "top center"
             }, 
             width: "0%",
             duration:0.8});
         
+            gsap.from("#project-description", {
+                scrollTrigger: {
+                    trigger: ".description-container",
+                    toggleActions: "play reset none reverse",
+                    start: "bottom 100%"
+                }, 
+                opacity: "0",
+                y:"20px",
+                duration:0.8}
+            )
+
         gsap.from(".skill", {
             scrollTrigger: {
                 trigger: ".skills-container",

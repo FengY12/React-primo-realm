@@ -48,7 +48,7 @@
 
 .contact-btn-logo{
     display: block;
-    width: 3rem;
+    width: 4rem;
     margin-left: auto;
 }
 
@@ -75,7 +75,7 @@
     fill: black;
 }
 
-.contact-btn:hover .mail {
+.contact-btn-logo:hover .mail {
     fill:black;
 }
 

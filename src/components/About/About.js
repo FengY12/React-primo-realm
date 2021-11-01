@@ -53,8 +53,8 @@ export default function About() {
             <div className="text-container">
             <p className="about-content" id="personal-about-content">
                 Hello, my name is Feng, I am a Pre-Junior in Drexel University majoring in Software Engineering.
-                I have a strong interest in new technologies and I am always curious to discover and learn about new
-                ideas for the present and the future. Other than coding, I am also interested in creating vector designs
+                In addition to having a strong interest in new technologies, I am always curious to discover and learn about new
+                ideas for the future as well. Besides coding, I am also interested in creating vector designs
                 and 3D models, because it feels accomplishing to be able to create something by myself.
 
             </p>
