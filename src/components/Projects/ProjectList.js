@@ -22,7 +22,11 @@ import projectChathomeRoom from "../../assets/chatAppProject/projectChat_homeRoo
 import projectChatDB from "../../assets/chatAppProject/projectChat_db.PNG";
 import chatAppIcon from "../../assets/chatAppProject/chatApp_logo.svg";
 
-
+import blenderIcon from "../../assets/blenderProject/blender_icon.svg";
+import blenderMenu from "../../assets/blenderProject/blender_menu.PNG";
+import blenderGrid from "../../assets/blenderProject/blender_grid.PNG";
+import blenderTriangle from "../../assets/blenderProject/blender_triangle.PNG";
+import blenderDiamond from "../../assets/blenderProject/blender_diamond.PNG";
 
 
 
@@ -34,12 +38,26 @@ export const ProjectList = [
         name: "Transaction Log App",
         urlName: "transactionLog",
         projectType:"personal",
-        skills: ["Use Maven project structure for Spring Application", "Use ideas MVC for seperation of entities/ layers", "Create controllers using Spring to handle CRUD and page rendering requests","Use Mybatis for dynamic SQL query", "Use Postman for request process testing", "Use Thymeleaf for dynamic page rendering"],
+        skills: ["Uses Maven project structure for Spring Application", "Uses MVC pattern for seperation of entities/ layers", "Create controllers using Spring to handle CRUD and page rendering requests","Uses Mybatis for dynamic SQL query", "Uses Postman for request process testing", "Uses Thymeleaf for dynamic page rendering"],
         cardDescription:"A transcation logging application built with Spring framework that uses CRUD operations to log transactions",
         description: "A transaction logging application built with Spring framework that uses CRUD operations to add, remove, update and display transactions. By using Mybatis, the application can dynamically update the field specified without the need for prompt or inputting items in every field. The application uses Thymeleaf to render backend compoents from MySQL database and displays it in a HTML format in the frontend. Users will be able to send POST and GET requests from the frontend as well",
         technologiesUsed:["Java", "Spring Boot", "Spring MVC", "Mybatis", "Thymeleaf", "Lombok", "MySQL", "Maven", "Postman"],
         github: "https://github.com/Fengyzh/Transaction-Log-System"
     },
+
+    {
+        image: [blenderMenu, blenderGrid, blenderTriangle, blenderDiamond],
+        cover: blenderIcon,
+        name: "Object Pattern Generator Add-on",
+        urlName: "blenderproject",
+        projectType:"personal",
+        skills: ["Uses Blender Python API for access to objects in Blender", "Creates a simple user interface allowing users to generate patterns in one click", "Uses object data for pattern generation allowing a non-destructive workflow", "Integrates adjustment window using Blender to reflect user adjustments in real-time"],
+        cardDescription:"A Blender add-on that uses Blender Python API to generate different types of pattern based on the active object",
+        description: "A Blender add-on that uses Blender's Python API to generate different types of pattern based on the active object. The add-on features a variety of patterns, ranging from a simple grid like pattern to a diamond or a triangular pattern. Additionally, the add-on uses object data for pattern generations instead of permanent manipulation which makes a non-destructive workflow possible. It also allows the user to adjust specific elements such as separation distance and amount based on the pattern chosen. Since this is a Blender add-on all the adjustments are reflected in the viewport in real time.",
+        technologiesUsed:["Python", "Blender Python API"],
+        github: "https://github.com/Fengyzh/Blender-Pattern-Generator"
+    },
+
     {
         image: [csvEditorMenu, csvEditorDisplay, csvEditorDiagram],
         cover: csvIcon,
@@ -71,7 +89,7 @@ export const ProjectList = [
         projectType:"course",
         cardDescription:"A live chatting website built with Node JS for quick temporary chat rooms. It also features an encrypted user anthentication system",
         description: "A live chatting website built with Node JS for quick temporary chat rooms. It features an encrypted user anthentication system using Bcrypt. The application mainly uses Express as the back-end for request handling and SQL connection and Socket.io for the live chat capability",
-        skills: ["Seted up SQL database using XAMMP and MySQL", "Used Express for the back-end", "Used EJS template engine to render contents dynamically", "Used Bcrypt to encrypt user and room passwords", "Used Socket.io for live chatting between users"],
+        skills: ["Set up SQL database using XAMMP and MySQL", "Used Express for the back-end", "Used EJS template engine to render contents dynamically", "Used Bcrypt to encrypt user and room passwords", "Used Socket.io for live chatting between users"],
         technologiesUsed:["Node JS", "Express", "Bcrypt", "MySQL", "Socket.io", "EJS"]
     }
 

@@ -59,7 +59,7 @@ export default function PProject(props) {
         gsap.to(rule, {
             scrollTrigger: {
                 trigger: "#content-container",
-                toggleActions: "restart none none reverse",
+                toggleActions: "play none none none",
                 start: "top center"
             }, 
             width: "0%",

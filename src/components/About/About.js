@@ -72,7 +72,7 @@ export default function About() {
                 Welcome to Primo Realm! Primo Realm is my main personal website and the hub for all my personal projects. 
                 The website is built with React.JS and other JavaScript libraries such as GSAP for animation. The purpose of creating Primo Realm was to not only
                 have a place to display all my projects, but also
-                a testament on the kind of website I can make from scratch.
+                a testament to the kind of website I can make from scratch.
                 
             </p>
             </div>

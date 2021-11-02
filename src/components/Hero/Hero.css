@@ -63,6 +63,7 @@
 
 
 #welcome-title{
+    position: relative;
     color: white;
     /*position: absolute;*/
     font-size: 6em;
@@ -74,51 +75,25 @@
     position: absolute;
     content: "";
     width:90%;
-    height:200%;
+    height:100%;
     background-color: white;
 }
 
 .welcome-title::after{
+    
     content: "Primo Realm";
     /*color:deepskyblue;*/
     color: deepskyblue;
 }
 
 
-/* For phone */
-@media screen and (max-width: 600px) {
-    #welcome-container {
-        position: absolute;
-        width: 50%;
-        left:50%;
-        height: 10%;
-    }
-    
-    
-    #welcome-title{
-        color: white;
-        /*position: absolute;*/
-        font-size: 2em;
-    }
-    
-    #sub-welcome-title {
-        margin-top: 1rem;
-        color:rgb(83, 82, 82);
-        font-size: 1.05rem;
-    }
 
-    .landing-logo{
-        overflow-x: hidden
-
-    }
-
-}
 
 
 @media screen and (max-width: 800px) {
     #welcome-title{
         color: white;
-        font-size: 2em;
+        font-size: 3em;
     }
   }
 
@@ -153,6 +128,36 @@
 }
 
 
+/* For phone */
+@media screen and (max-width: 600px) {
+    #welcome-container {
+        position: absolute;
+        width: 50%;
+        left:50%;
+        height: 10%;
+    }
+    
+    
+    #welcome-title{
+        color: white;
+        /*position: absolute;*/
+        font-size: 2em;
+    }
+    
+    #sub-welcome-title {
+        margin-top: 1rem;
+        color:rgb(83, 82, 82);
+        font-size: 1.05rem;
+    }
+
+    .landing-logo{
+        overflow-x: hidden
+
+    }
+
+}
+
+
 @media screen and (min-width: 1024px) and (max-width: 1100px) {
     #welcome-container {
         width: 50%;
@@ -171,4 +176,7 @@
         color:rgb(83, 82, 82);
         font-size: 1.05rem;
     }
+
+
+
 }
