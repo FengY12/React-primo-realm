@@ -171,7 +171,7 @@ export default function CProject(props) {
             </div>
 
             <div class="skills-container">
-                <h2 class="titles"> Skill Used </h2>
+                <h2 class="titles"> Technical Details </h2>
                 <div class="project-skill">
                 {skills.map(skill => (
                  <p class="skill"> - {skill} </p>

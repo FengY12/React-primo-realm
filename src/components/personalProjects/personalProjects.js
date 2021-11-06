@@ -190,7 +190,7 @@ export default function PProject(props) {
             </div>
             
             <div class="skills-container">
-                <h2 class="titles"> Skills Used </h2>
+                <h2 class="titles"> Technical Details </h2>
                 <div class="project-skill">
                 {skills.map(skill => (
                  <p class="skill"> - {skill} </p>
