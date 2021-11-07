@@ -89,7 +89,7 @@ export default function CProject(props) {
             scrollTrigger: {
                 trigger: ".technology-used-container",
                 toggleActions: "play reset none reverse",
-                start: "bottom bottom"
+                start: "50% 100%"
             }, 
             opacity: "0",
             y:"15px",

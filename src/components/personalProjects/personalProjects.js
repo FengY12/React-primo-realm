@@ -69,7 +69,7 @@ export default function PProject(props) {
         gsap.from("#project-description", {
             scrollTrigger: {
                 trigger: ".description-container",
-                toggleActions: "play reset none reverse",
+                toggleActions: "play none none reverse",
                 start: "bottom 100%"
             }, 
             opacity: "0",
