@@ -28,17 +28,36 @@ import blenderGrid from "../../assets/blenderProject/blender_grid.PNG";
 import blenderTriangle from "../../assets/blenderProject/blender_triangle.PNG";
 import blenderDiamond from "../../assets/blenderProject/blender_diamond.PNG";
 
+import nootoedit from "../../assets/nooto/edit.png";
+import nootohome from "../../assets/nooto/home.png";
+import nootonote from "../../assets/nooto/note.png";
+import nootoshare from "../../assets/nooto/share.png";
+import nootologin from "../../assets/nooto/login.png";
+import nootoicon from "../../assets/nooto/nooto_icon.svg";
+
 
 
 
 export const ProjectList = [
     {
+        image: [nootologin, nootohome, nootonote, nootoedit, nootoshare],
+        cover: nootoicon,
+        name: "Nooto",
+        urlName: "nooto",
+        projectType:"personal",
+        skills: ["Uses MERN stack for the Web Application", "Uses Firebase for user registration and authentication", "Developed API endpoints for CRUD operations","Uses MongoDB for data persistent and Redis for data caching ", "Uses Docker to containerized the application", "Uses Nginx to serve static files"],
+        cardDescription:"A Markdown enabled block style note-taking web app that supports code syntax highlighting and sharing notes to other users",
+        description: "A Markdown enabled block style note-taking web app that supports code syntax highlighting and sharing notes to other users. Users are able to create an account and start taking notes with Nooto. Since Nooto is a block style note taking app, users can re-arragnge the structure of their blocks in the note easily. Nooto is also Markdown enabled with code syntax highlighting, which means users can take better and more organized notes. Further more, the application uses Redis caching to improve overall performance, and with Docker and Nginx, the application can be easily deployed",
+        technologiesUsed:["HTML", "CSS", "JavaScript", "React JS", "Node JS", "MongoDB", "Firebase", "Redis", "Docker", "Nginx"],
+        github: "https://github.com/Fengyzh/Nooto"
+    },
+    {
         image: [transLogIndex, transLogViewSpecific, transLogAdd],
         cover: transLog,
-        name: "Transaction Log App",
+        name: "Expense Tracking App",
         urlName: "transactionLog",
         projectType:"personal",
-        skills: ["Uses Maven project structure for Spring Application", "Uses MVC pattern for seperation of entities/ layers", "Create controllers using Spring to handle CRUD and page rendering requests","Uses Mybatis for dynamic SQL query", "Uses Postman for request process testing", "Uses Thymeleaf for dynamic page rendering"],
+        skills: ["Uses Maven project structure for Spring Application", "Uses MVC pattern for seperation of entities/ layers", "Creates controllers using Spring to handle CRUD and page rendering requests","Uses Mybatis for dynamic SQL query", "Uses Postman for request process testing", "Uses Thymeleaf for dynamic page rendering"],
         cardDescription:"A transcation logging application built with Spring framework that uses CRUD operations to log transactions",
         description: "A transaction logging application built with Spring framework that uses CRUD operations to add, remove, update and display transactions. By using Mybatis, the application can dynamically update the field specified without the need for prompt or inputting items in every field. The application uses Thymeleaf to render backend compoents from MySQL database and displays it in a HTML format in the frontend. Users will be able to send POST and GET requests from the frontend as well",
         technologiesUsed:["Java", "Spring Boot", "Spring MVC", "Mybatis", "Thymeleaf", "Lombok", "MySQL", "Maven", "Postman"],
@@ -92,7 +111,6 @@ export const ProjectList = [
         skills: ["Set up SQL database using XAMMP and MySQL", "Used Express for the back-end", "Used EJS template engine to render contents dynamically", "Used Bcrypt to encrypt user and room passwords", "Used Socket.io for live chatting between users"],
         technologiesUsed:["Node JS", "Express", "Bcrypt", "MySQL", "Socket.io", "EJS"]
     }
-
 
 
 
