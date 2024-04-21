@@ -51,11 +51,11 @@ function timeline() {
       transformOrigin:"center",
         scale:100,
         ease: "expo.out",
-        duration:1.2
+        duration:2
     }, "-=0.5").to(".load", {
       autoAlpha:0,
       duration:2
-    }, "-=0.5").to(rule, {
+    }, "-=1.5").to(rule, {
       width: "0%",
       duration:0.8,
     }, "-=1.6").to(subWelcomText, {

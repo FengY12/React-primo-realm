@@ -52,9 +52,9 @@ export default function About() {
 
             <div className="text-container">
             <p className="about-content" id="personal-about-content">
-                Hello, my name is Feng, I am was a student in Drexel University majoring in Software Engineering.
+                Hello, my name is Feng, I was a student in Drexel University majoring in Software Engineering.
                 In addition to having a strong interest in new technologies, I am always curious to discover and learn about new
-                ideas for the future as well. Besides coding, I am also interested in creating vector designs
+                ideas for the future as well. Besides coding, I am also interested in UI/UX and graphic designs
                 and trying out new technologies, because it feels accomplishing to be able to create something by myself.
 
             </p>
