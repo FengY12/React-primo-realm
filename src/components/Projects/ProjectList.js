@@ -57,11 +57,11 @@ export const ProjectList = [
         name: "Expense Tracking App",
         urlName: "transactionLog",
         projectType:"personal",
-        skills: ["Uses Maven project structure for Spring Application", "Uses MVC pattern for seperation of entities/ layers", "Creates controllers using Spring to handle CRUD and page rendering requests","Uses Mybatis for dynamic SQL query", "Uses Postman for request process testing", "Uses Thymeleaf for dynamic page rendering"],
+        skills: ["Uses Maven project structure for Spring Application", "Uses MVC pattern for seperation of entities/ layers", "Creates controllers using Spring to handle CRUD and different service requests","Uses JPA for SQL query", "Uses LLM for SQL query generation"],
         cardDescription:"A transcation logging application built with Spring framework that uses CRUD operations to log transactions",
-        description: "A transaction logging application built with Spring framework that uses CRUD operations to add, remove, update and display transactions. By using Mybatis, the application can dynamically update the field specified without the need for prompt or inputting items in every field. The application uses Thymeleaf to render backend compoents from MySQL database and displays it in a HTML format in the frontend. Users will be able to send POST and GET requests from the frontend as well",
-        technologiesUsed:["Java", "Spring Boot", "Spring MVC", "Mybatis", "Thymeleaf", "Lombok", "MySQL", "Maven", "Postman"],
-        github: "https://github.com/Fengyzh/Transaction-Log-System"
+        description: "A transaction logging application built with Spring framework that uses CRUD operations to add, remove, update and display transactions. With the power of LLM, user can write what they want in the search bar and LLM would generate the SQL query to get the data that the user wants. The application uses NextJS as the front-end to render data from the backend. Users will be able to view,edit and search their transactions",
+        technologiesUsed:["Java", "Spring Boot", "Spring MVC", "JPA", "NextJS", "Lombok", "MySQL", "Maven", "Tailwind", "LLM", "Docker"],
+        github: "https://github.com/Fengyzh/Expense-Tracking"
     },
 
     {
